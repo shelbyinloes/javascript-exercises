@@ -13,7 +13,17 @@
  */
 
 function anagrams(stringA, stringB) {
-
-}
+    let arrA = stringA.toLowerCase().split("").sort().join('').trim();
+    let arrB = stringB.toLowerCase().split("").sort().join('').trim();
+    if(/^[a-zA-Z]+$/.test(arrB || arrA)){
+      console.log("woah")
+    }
+    if(arrA === arrB){
+      return true
+    }else{
+      console.log("Something is wrong")
+    }
+    console.log(arrA, arrB)
+  }
 
 module.exports = anagrams;
