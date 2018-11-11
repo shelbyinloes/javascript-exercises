@@ -12,6 +12,8 @@
  * anagrams('Hi there', 'Bye there') === false
  */
 
+
+ //this function only working if there are no special characters
 function anagrams(stringA, stringB) {
     let arrA = stringA.toLowerCase().split("").sort().join('').trim();
     let arrB = stringB.toLowerCase().split("").sort().join('').trim();
