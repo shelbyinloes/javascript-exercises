@@ -13,7 +13,17 @@
  */
 
 function chunk(array, size) {
-
+    // newArr is what we are pushing to
+    const newArray = []
+    // copied array
+    let copiedArray = [...array]
+    //calculating how many times we are chunking
+    const numChild = Math.ceil(copiedArray.length / size);
+    // splicin' n' dicin'
+    for(let i = 0; i < numChild; i++){
+      newArray.push(copiedArray.splice(0, size));
+    }
+    return newArray
 }
 
 module.exports = chunk;
