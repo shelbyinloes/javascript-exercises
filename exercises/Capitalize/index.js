@@ -12,7 +12,12 @@
  */
 
 function capitalize(str) {
-
+    const splitStr = str.split(' ')
+    const returnedStr = []
+    splitStr.forEach((word) => {
+      returnedStr.push(word.charAt(0).toUpperCase() + word.slice(1))
+    })
+    return returnedStr.join(' ')
 }
 
 module.exports = capitalize;
