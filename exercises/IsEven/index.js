@@ -10,8 +10,6 @@
 * isEven(3) === false
 */
 
-function isEven(n) {
-
-}
+const isEven = n => !(n & 1);
 
 module.exports = isEven;
