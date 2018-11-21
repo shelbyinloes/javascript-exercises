@@ -19,6 +19,13 @@
  */
 
 function matrix(n) {
+    //thought process:
+    //whatever the number is for the matrix, 
+    // I will need that many arrays + 
+    // that many items in each array
+
+    //first array push increment to array until length is hit
+    //okay dont know from here, will research
 
 }
 
