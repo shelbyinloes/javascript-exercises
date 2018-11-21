@@ -13,7 +13,15 @@
 */
 
 function longestWord(sen) {
-
+    let senArr = sen.replace(/[^\w\s]/gi, '').split(" ")
+    console.log(senArr)
+    let longWord = senArr[0]
+    for(i = 0; i < senArr.length; i++){
+      if(senArr[i].length > longWord.length){
+        longWord = senArr[i]
+      }
+    }
+    return longWord;
 }
 
 module.exports = longestWord;
