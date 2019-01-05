@@ -9,8 +9,8 @@
  * vowels('Hello there!') === 4
  */
 
-function vowels(string) {
-
+function vowels(str) {
+    return str.match(/[aeiou]/gi).length;
 }
 
 module.exports = vowels;
