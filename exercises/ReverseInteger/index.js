@@ -13,16 +13,14 @@
  */
 
 function reverse(num) {
-    let negative;
-  // putting into an array
-  const numArr = num.toString().split('')
+  let negative; //saving for later
+  
+  const numArr = num.toString().split('') //turning num into an array
   
   // checking for negative
   if(numArr[0] == '-') {
-    console.log('negativo')
-    numArr.shift();
-    negative = true;
-    console.log(negative)
+    numArr.shift(); //get rid of '-'
+    negative = true; //let us know later on to put '-' back in
   }
 
   // while the last number in the array is 0, pop off
@@ -35,9 +33,9 @@ function reverse(num) {
     console.log("still here")
     numArr.push('-');
   }
-  //put it all back together
-  const numStr =  numArr.reverse().join('');
-  return Number(numStr);
+  
+//   const numStr =  numArr.reverse().join(''); //put it all back together
+  return Number(numArr.reverse().join('')); //return & turn into arr
 }
 
 module.exports = reverse;
