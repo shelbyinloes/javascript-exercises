@@ -24,15 +24,10 @@ function reverse(num) {
   }
 
   // while the last number in the array is 0, pop off
-  while(numArr[numArr.length-1] == 0){
-    numArr.pop();
-  }
+  while(numArr[numArr.length-1] == 0){ numArr.pop() }
 
   //adding back in the negative
-  if(negative == true){
-    console.log("still here")
-    numArr.push('-');
-  }
+  if(negative == true){ numArr.push('-') }
   
 //   const numStr =  numArr.reverse().join(''); //put it all back together
   return Number(numArr.reverse().join('')); //return & turn into arr
