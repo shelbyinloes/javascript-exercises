@@ -15,17 +15,13 @@
 
  //this function only working if there are no special characters
 function anagrams(stringA, stringB) {
-    let arrA = stringA.toLowerCase().split("").sort().join('').trim();
-    let arrB = stringB.toLowerCase().split("").sort().join('').trim();
-    if(/^[a-zA-Z]+$/.test(arrB || arrA)){
-      console.log("woah")
-    }
-    if(arrA === arrB){
-      return true
-    }else{
-      console.log("Something is wrong")
-    }
-    console.log(arrA, arrB)
-  }
+  //make strings into alphabatized strings:
+  let newA = stringA.toLowerCase().split("").sort().join('').trim().replace(/[^a-zA-Z ]/g, "");
+  let newB = stringB.toLowerCase().split("").sort().join('').trim().replace(/[^a-zA-Z ]/g, "");
+
+
+  //if they are the same or different
+  return newA === newB ? true : false;
+}
 
 module.exports = anagrams;
